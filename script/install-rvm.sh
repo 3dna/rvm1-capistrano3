@@ -11,8 +11,7 @@ mkdir "${CURL_HOME}/" &&
 exit $?
 
 # run the installer
-echo $rvm_path
-if \curl -L https://get.rvm.io -o rvm-installer.sh && bash rvm-installer.sh stable --path $rvm_path
+if \curl -L https://raw.githubusercontent.com/rvm/rvm/stable/binscripts/rvm-installer -o rvm-installer.sh && bash rvm-installer.sh stable
 then __LAST_STATUS=0
 else __LAST_STATUS=$?
 fi
